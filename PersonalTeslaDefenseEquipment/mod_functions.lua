@@ -36,18 +36,23 @@ local function _compute_buffer_capacity(energy_consumption)
 end
 
 local function _chain_and_beam(beam_type)
-    local beam_entity = {}
-    if beam_type == "turret" then
-        beam_entity = data.raw["electric-turret"]["tesla-turret"].attack_parameters
-    else -- gun
-        beam_entity = data.raw["ammo"]["tesla-ammo"]
-    end
-    local target_effects = util.table.deepcopy(beam_entity.ammo_type.action.action_delivery.target_effects)
-
-    return {
-        chain = target_effects[1].action.action_delivery.chain,
-        beam = target_effects[2].action.action_delivery.beam
+    -- start with our custom names and update if we are not configured for custom beam
+    local chain_and_beam = {
+        chain = "chain-personal-tesla-defense-chain",
+        beam = "chain-personal-tesla-defense-beam-start"
     }
+
+    if beam_type == "turret" then
+        local target_effects = util.table.deepcopy(data.raw["electric-turret"]["tesla-turret"].attack_parameters.ammo_type.action.action_delivery.target_effects)
+        chain_and_beam.chain = target_effects[1].action.action_delivery.chain
+        chain_and_beam.beam = target_effects[2].action.action_delivery.beam
+    elseif beam_type == "gun" then
+        local target_effects = util.table.deepcopy(data.raw["ammo"]["tesla-ammo"].ammo_type.action.action_delivery.target_effects)
+        chain_and_beam.chain = target_effects[1].action.action_delivery.chain
+        chain_and_beam.beam = target_effects[2].action.action_delivery.beam
+    end
+
+    return chain_and_beam
 end
 --#endregion private functions
 

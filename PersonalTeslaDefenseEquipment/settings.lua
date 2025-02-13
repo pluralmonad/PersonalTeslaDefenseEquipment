@@ -16,11 +16,12 @@ data:extend({
         name = "PeronsalTeslaDefenseSetting-beam_type",
         setting_type = "startup",
         type = "string-setting",
-        default_value = "turret",
+        default_value = "gun",
         allowed_values = 
         {
             "turret",
-            "gun"
+            "gun",
+            "custom"
         },
         order = "a2"
     },
@@ -70,5 +71,65 @@ data:extend({
         default_value = 120,
         minimum_value = 20,
         order = "b4"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_max_jumps",
+        setting_type = "startup",
+        type = "int-setting",
+        default_value = 12,
+        minimum_value = 1,
+        maximum_value = 100,
+        order = "c1"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_jump_range",
+        setting_type = "startup",
+        type = "int-setting",
+        default_value = 12,
+        minimum_value = 1,
+        maximum_value = 50,
+        order = "c2"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_fork_chance",
+        setting_type = "startup",
+        type = "double-setting",
+        default_value = 0.3,
+        minimum_value = 0.01,
+        maximum_value = 1.0,
+        order = "c3"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_fork_chance_per_quality",
+        setting_type = "startup",
+        type = "double-setting",
+        default_value = 0.05,
+        minimum_value = 0.01,
+        maximum_value = 0.5,
+        order = "c4"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_duration",
+        setting_type = "startup",
+        type = "int-setting",
+        default_value = 30,
+        minimum_value = 1,
+        order = "c5"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_base_damage",
+        setting_type = "startup",
+        type = "int-setting",
+        default_value = 30,
+        minimum_value = 1,
+        order = "c6"
+    },
+    {
+        name = "PeronsalTeslaDefenseSetting-beam_fork_base_damage",
+        setting_type = "startup",
+        type = "int-setting",
+        default_value = 30,
+        minimum_value = 1,
+        order = "c7"
     }
  })

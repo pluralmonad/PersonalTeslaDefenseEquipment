@@ -20,10 +20,11 @@ Which technology will unlock the Personal Tesla Defense
 
 ### Beam type
 Whether to use the tesla turret or tesla gun beam
-- tesla-turret (default)
-- tesla-gun
+- tesla-turret
+- tesla-gun (default)
+- custom
 
-NOTE: this dramatically changes the damage output. If tesla-turret is too OP for your play style, try setting it to tesla-gun.
+NOTE: this dramatically changes the damage output. If tesla-turret is too OP for your play style, try setting it to tesla-gun. Or better yet, take full control with a custom beam.
 
 ### Equipment Grid Size
 The space the equipment will take up in the equipment grid
@@ -53,6 +54,36 @@ NOTE: this scales the internal "buffer_capacity" to maintain the original person
 The number of ticks before the equipment will shoot again
 - any integer >= 20 (default 120)
 
+### Custom beam max jumps
+Maximum number of jumps for the custom beam
+- any integer >= 1 and <= 100 (default 12)
+
+### Custom beam jump range
+Jump range for the custom beam
+- any integer >= 1 and <= 50 (default 12)
+
+### Custom beam fork chance
+The chance the custom beam will fork
+- any double >= 0.01 and <= 1.0 (default 0.3)
+
+### Custom beam fork chance per quality
+The custom beam fork chance increase per quality tier
+- any double >= 0.01 and <= 0.5 (default 0.05)
+
+NOTE: the combination of this setting and the above fork chance can cause the chance to rise above 100% (1.0). This outcome has not been thoroughly tested.
+
+### Custom beam duration
+The number of ticks for which the custom beam fires
+- any integer >= 1 (default 30)
+
+### Custom beam base damage
+The base damage dealt by the custom beam
+- any integer >= 1 (default 30)
+
+### Custom beam fork base damage
+The base damage dealt by forks of the custom beam
+- any integer >= 1 (default 30)
+
 # Notes
 
 - Graphics/icons are terrible. I am a GIMP novice :)
@@ -63,6 +94,8 @@ The number of ticks before the equipment will shoot again
 
 - You should be able to add it to an existing save without issue and I see no reason why it wouldn't work in multiplayer.
 
+- All of the defaults for the new custom beam settings are pulled from the tesla-gun beam.
+
 - I'm surprised it was this easy. Kudos to the Factorio devs for an amazingly extensible piece of software.
 
 # Conflicts / Bugs
@@ -70,8 +103,6 @@ The number of ticks before the equipment will shoot again
 I took care to not replace or update anything existing, only adding components. Should not conflict with anything.
 
 # Future Plans
-
-- Maybe create a custom beam type to take control of all the control values, like number of jumps, fork chance, etc.
 
 - Better graphics.
 

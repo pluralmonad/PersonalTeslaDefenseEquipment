@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2025.02.13
+  Features:
+    - Added custom beam type allowing full control over weapon properties.
+  Changes:
+    - Changed default beam type from tesla-turret to tesla-gun.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
 Date: 2025.02.13
   Features:

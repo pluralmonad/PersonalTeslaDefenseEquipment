@@ -9,7 +9,7 @@ local energy_consumption = settings.startup["PeronsalTeslaDefenseSetting-energy_
 local shot_cooldown = settings.startup["PeronsalTeslaDefenseSetting-shot_cooldown"].value
 local beam_type = settings.startup["PeronsalTeslaDefenseSetting-beam_type"].value
 
--- conditionally pull beam data from turret or gun
+-- gather our beam and chain names dependent on beam type
 local chain_and_beam = mod_functions.chain_and_beam(beam_type)
 
 -- use the PLD prototype as our starting point
