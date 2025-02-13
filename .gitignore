@@ -1,0 +1,5 @@
+# ignore packaged mod
+*.zip
+
+# do not include precursor assets
+assets/
