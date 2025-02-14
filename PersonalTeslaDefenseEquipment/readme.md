@@ -4,9 +4,9 @@ I wanted a powerful personal defense equipment and really like the new tesla wea
 
 # What it does
 
-- This mod adds a copy of the personal laser defense equipment that shoots the same beam/weapon as the tesla turret.
+- This mod adds a copy of the personal laser defense equipment that shoots the chaining tesla beam.
 
-- The recipe for the equipment is set based on what technology requirement you select in settings. This seemed like a simple implementation that wouldn't inflate the mod settings too much.
+- The recipe for the equipment is set based on what technology requirement you select in settings. "none" will make the recipe available right away and simply takes steel[steel-plate] and copper[copper-plate]. This seemed like a simple implementation that wouldn't inflate the mod settings more than they are already.
 
 # Configurables
 
@@ -103,6 +103,8 @@ The base damage dealt by forks of the custom beam
 I took care to not replace or update anything existing, only adding components. Should not conflict with anything.
 
 # Future Plans
+
+- Update defaults to make them more coherent.
 
 - Better graphics.
 
